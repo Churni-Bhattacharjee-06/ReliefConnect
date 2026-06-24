@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReliefConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h1>ReliefConnect</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sos">SOS</a></li>
+            <li><a href="#checklist">Checklist</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+            <li><a href="#shelters">Shelters</a></li>
+            <li><a href="#guide">Guide</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>⚠ Cyclone Alert</h2>
+        <p>Stay prepared and stay safe during emergencies.</p>
+        <p>📍 Current Area: Bhubaneswar</p>
+
+        <div>
+            <button>🚨 Emergency</button>
+        </div>
+    </section>
+
+    <!-- SOS Generator -->
+    <section id="sos">
+        <h2>SOS Generator</h2>
+
+        <input type="text" id="name" placeholder="Enter Name">
+
+        <input type="text" id="location" placeholder="Enter Location">
+
+        <input type="text" id="type" placeholder="Emergency Type">
+
+        <button onclick="generateSOS()">Generate SOS</button>
+
+        <textarea id="output" rows="6" readonly></textarea>
+
+        <button onclick="copySOS()">Copy Message</button>
+    </section>
+
+    <!-- Emergency Kit Checklist -->
+    <section id="checklist">
+        <h2>Emergency Kit Checklist</h2>
+
+        <label><input type="checkbox" class="item"> Water</label><br>
+
+        <label><input type="checkbox" class="item"> Medicines</label><br>
+
+        <label><input type="checkbox" class="item"> Torch</label><br>
+
+        <label><input type="checkbox" class="item"> Power Bank</label><br>
+
+        <label><input type="checkbox" class="item"> Important Documents</label><br>
+
+        <label><input type="checkbox" class="item"> First Aid Kit</label><br>
+
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <p id="progress-text">0% Prepared</p>
+    </section>
+
+    <!-- Emergency Contacts -->
+    <section id="contacts">
+        <h2>Emergency Contacts</h2>
+
+        <div class="card">
+            🚑 Ambulance - <a href="tel:108">108</a>
+        </div>
+
+        <div class="card">
+            👮 Police - <a href="tel:100">100</a>
+        </div>
+
+        <div class="card">
+            🔥 Fire - <a href="tel:101">101</a>
+        </div>
+
+        <div class="card">
+            📞 Disaster Management - <a href="tel:112">112</a>
+        </div>
+    </section>
+
+    <!-- Shelter Directory -->
+    <section id="shelters">
+        <h2>Shelter Directory</h2>
+
+        <input type="text" id="search" placeholder="Search Shelter">
+
+        <div id="shelter-list">
+            <!-- JS will add shelters here -->
+        </div>
+    </section>
+
+    <!-- Safety Guide -->
+    <section id="guide">
+        <h2>Safety Guide</h2>
+
+        <button onclick="showGuide('cyclone')">🌪 Cyclone</button>
+
+        <button onclick="showGuide('flood')">🌊 Flood</button>
+
+        <button onclick="showGuide('earthquake')">🌍 Earthquake</button>
+
+        <div id="guide-content"></div>
+    </section>
+
+    <!-- Preparedness Score -->
+    <section id="score">
+        <h2>Preparedness Score</h2>
+
+        <p id="score-text">Score: 0 / 100</p>
+
+        <div id="suggestions">
+            Complete your checklist to see suggestions.
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 ReliefConnect | Disaster Preparedness Companion</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
