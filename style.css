@@ -626,6 +626,3 @@ footer strong { color: var(--red); }
     .contacts-grid { grid-template-columns: repeat(2, 1fr); }
     button { width: 100%; margin-right: 0; }
 }
-
-    }
-}
