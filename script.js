@@ -520,3 +520,33 @@ function playSiren() {
     beep(ctx.currentTime + 0.5, 600, 900, 0.5);
     beep(ctx.currentTime + 1.0, 600, 900, 0.5);
 }
+
+// Siren Functions
+function playSiren() {
+    const siren = document.getElementById("siren");
+
+    if (siren) {
+        siren.currentTime = 0;
+        siren.play();
+    }
+}
+
+function stopSiren() {
+    const siren = document.getElementById("siren");
+
+    if (siren) {
+        siren.pause();
+        siren.currentTime = 0;
+    }
+}
+
+function triggerEmergency() {
+
+    playSiren();
+
+    document
+        .getElementById("sos")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+}
