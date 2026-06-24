@@ -11,6 +11,7 @@
     <!-- Navbar -->
     <nav>
         <h1>ReliefConnect</h1>
+
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#sos">SOS</a></li>
@@ -21,48 +22,64 @@
         </ul>
     </nav>
 
-    <!-- Home Section -->
+    <!-- Home -->
     <section id="home">
-        <h2>⚠ Cyclone Alert</h2>
-        <p>Stay prepared and stay safe during emergencies.</p>
-        <p>📍 Current Area: Bhubaneswar</p>
-
-        <div>
-            <button>🚨 Emergency</button>
-        </div>
+        <!-- Filled dynamically by script.js -->
     </section>
 
     <!-- SOS Generator -->
     <section id="sos">
+
         <h2>SOS Generator</h2>
 
-        <input type="text" id="name" placeholder="Enter Name">
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter Name"
+        >
 
-        <input type="text" id="location" placeholder="Enter Location">
+        <input
+            type="text"
+            id="location"
+            placeholder="Enter Location"
+        >
 
-        <input type="text" id="type" placeholder="Emergency Type">
+        <input
+            type="text"
+            id="type"
+            placeholder="Emergency Type"
+        >
 
-        <button onclick="generateSOS()">Generate SOS</button>
+        <button onclick="generateSOS()">
+            Generate SOS
+        </button>
 
-        <textarea id="output" rows="6" readonly></textarea>
+        <button onclick="playSiren()">
+            🚨 Emergency Alarm
+        </button>
 
-        <button onclick="copySOS()">Copy Message</button>
+        <textarea
+            id="output"
+            rows="6"
+            readonly
+        ></textarea>
+
+        <button onclick="copySOS()">
+            Copy Message
+        </button>
+
     </section>
 
     <!-- Emergency Kit Checklist -->
     <section id="checklist">
+
         <h2>Emergency Kit Checklist</h2>
 
         <label><input type="checkbox" class="item"> Water</label><br>
-
         <label><input type="checkbox" class="item"> Medicines</label><br>
-
         <label><input type="checkbox" class="item"> Torch</label><br>
-
         <label><input type="checkbox" class="item"> Power Bank</label><br>
-
         <label><input type="checkbox" class="item"> Important Documents</label><br>
-
         <label><input type="checkbox" class="item"> First Aid Kit</label><br>
 
         <div class="progress-container">
@@ -70,55 +87,75 @@
         </div>
 
         <p id="progress-text">0% Prepared</p>
+
     </section>
 
     <!-- Emergency Contacts -->
     <section id="contacts">
+
         <h2>Emergency Contacts</h2>
 
         <div class="card">
-            🚑 Ambulance - <a href="tel:108">108</a>
+            🚑 Ambulance -
+            <a href="tel:108">108</a>
         </div>
 
         <div class="card">
-            👮 Police - <a href="tel:100">100</a>
+            👮 Police -
+            <a href="tel:100">100</a>
         </div>
 
         <div class="card">
-            🔥 Fire - <a href="tel:101">101</a>
+            🔥 Fire -
+            <a href="tel:101">101</a>
         </div>
 
         <div class="card">
-            📞 Disaster Management - <a href="tel:112">112</a>
+            📞 Disaster Management -
+            <a href="tel:112">112</a>
         </div>
+
     </section>
 
     <!-- Shelter Directory -->
     <section id="shelters">
+
         <h2>Shelter Directory</h2>
 
-        <input type="text" id="search" placeholder="Search Shelter">
+        <input
+            type="text"
+            id="search"
+            placeholder="Search Shelter"
+        >
 
-        <div id="shelter-list">
-            <!-- JS will add shelters here -->
-        </div>
+        <div id="shelter-list"></div>
+
     </section>
 
     <!-- Safety Guide -->
     <section id="guide">
+
         <h2>Safety Guide</h2>
 
-        <button onclick="showGuide('cyclone')">🌪 Cyclone</button>
+        <button onclick="showGuide('cyclone')">
+            🌪 Cyclone
+        </button>
 
-        <button onclick="showGuide('flood')">🌊 Flood</button>
+        <button onclick="showGuide('flood')">
+            🌊 Flood
+        </button>
 
-        <button onclick="showGuide('earthquake')">🌍 Earthquake</button>
+        <button onclick="showGuide('earthquake')">
+            🌍 Earthquake
+        </button>
 
         <div id="guide-content"></div>
+
     </section>
 
     <!-- Preparedness Score -->
     <section id="score">
+
         <h2>Preparedness Score</h2>
 
         <p id="score-text">Score: 0 / 100</p>
@@ -126,12 +163,28 @@
         <div id="suggestions">
             Complete your checklist to see suggestions.
         </div>
+
     </section>
 
-    <!-- Footer -->
+    <!-- Siren Audio -->
+    <audio id="siren">
+        <source src="siren.mp3" type="audio/mpeg">
+    </audio>
+
+        <!-- Footer -->
     <footer>
         <p>© 2026 ReliefConnect | Disaster Preparedness Companion</p>
     </footer>
+
+    <!-- Siren Sound -->
+    <audio id="siren">
+        <source src="siren.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
 
     <script src="script.js"></script>
 
